@@ -4,6 +4,7 @@ public class CrawlingVO {
 
 	private String title;
 	private String body;
+	private String link;
 		
 	public String getTitle() {
 		return title;
@@ -18,6 +19,12 @@ public class CrawlingVO {
 		this.body = body;
 	}
 
+	public String getLink() {
+		return link;
+	}
+	public void setLink(String link) {
+		this.link = link;
+	}
 	@Override
 	public String toString() {
 		return "CrawlingVO [title=" + title + ", body=" + body + "]";

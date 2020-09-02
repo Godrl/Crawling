@@ -7,15 +7,21 @@
 <title>News</title>
 </head>
 <body>
+	<div class="left_cont">
 	<h2>News List</h2>
 	<section class="news_box">
-		<c:forEach items="${newsList }" var="news">
+		<div class="newsPost">
 			<div class="assetText">
-				<h3>${news.title }</h3>
-				<p>${news.body }</p>
-			</div>			
-		</c:forEach>
+	        	<c:forEach items="${newsList }" var="news">
+	            	<a href="https://zdnet.co.kr/${news.link }">
+	                	<h3>${news.title }</h3>
+	                   	<p>${news.body }</p>
+					</a>
+				</c:forEach>
+			</div>
+		</div>
 	</section>
+	</div>
 	
 </body>
 </html>

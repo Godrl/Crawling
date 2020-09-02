@@ -31,20 +31,19 @@ public class CrawlingServiceImp implements CrawlingService{
 			e.printStackTrace();
 		}
 		
-		Elements newsList= doc.select("div.left_cont");
-		String title = newsList.select("h3").text();
-		String body = newsList.select("p").text();
+		Elements newsList= doc.select("section.news_box");
 		
-		logger.info("title = "+title);
-		logger.info("body = "+body);
+//		doc.select("[href]") : href 속성을 가진 요소들을 선택합니다.
 		
+				
 //		div.newPost = div.assetText
 		for(Element element : newsList.select("div.newsPost")) {
 			
 			CrawlingVO cvo = new CrawlingVO();
-			
-			cvo.setTitle(element.select("h3").text());
-			cvo.setBody(element.select("p").text());
+		
+			cvo.setTitle(element.select("h3").text()); //title
+			cvo.setBody(element.select("p").text()); //body 
+			cvo.setLink(element.getElementsByAttribute("href").attr("href")); //link
 			
 			list.add(cvo);
 		}
