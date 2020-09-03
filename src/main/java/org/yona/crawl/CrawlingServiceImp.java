@@ -44,6 +44,7 @@ public class CrawlingServiceImp implements CrawlingService{
 			cvo.setTitle(element.select("h3").text()); //title
 			cvo.setBody(element.select("p").text()); //body 
 			cvo.setLink(element.getElementsByAttribute("href").attr("href")); //link
+			cvo.setImg(element.getElementsByAttribute("data-src").attr("data-src")); //image
 			
 			list.add(cvo);
 		}

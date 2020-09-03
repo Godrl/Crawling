@@ -11,12 +11,21 @@
 	<h2>News List</h2>
 	<section class="news_box">
 		<div class="newsPost">
-			<div class="assetText">
-	        	<c:forEach items="${newsList }" var="news">
-	            	<a href="https://zdnet.co.kr/${news.link }">
-	                	<h3>${news.title }</h3>
-	                   	<p>${news.body }</p>
-					</a>
+			<div class="newsPost">
+				<c:forEach items="${newsList }" var="news">
+					<div class="assetThumb">
+						<a href="https://zdnet.co.kr/${news.link }" title="">
+							<figure class="img">
+								<img src="${news.img }" data-src="${news.img }" class="lazyload" width="170" height="122" alt="">
+							</figure>
+						</a>
+					</div>
+					<div class="assetText">
+	               		<a href="https://zdnet.co.kr/${news.link }">
+	                		<h3>${news.title }</h3>
+	                   		<p>${news.body }</p>
+						</a>
+					</div>
 				</c:forEach>
 			</div>
 		</div>
