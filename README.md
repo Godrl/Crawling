@@ -4,7 +4,7 @@
 <img src="https://user-images.githubusercontent.com/33336934/92305863-11d5aa80-efc6-11ea-8988-f35891d6c90a.png" width="40%">
 
 ### CrawlingServiceImp.java
-<img src="https://user-images.githubusercontent.com/33336934/92306782-b78c1800-efcc-11ea-8693-adf80f52e47d.png" width="70%">
+<img src="https://user-images.githubusercontent.com/33336934/92306782-b78c1800-efcc-11ea-8693-adf80f52e47d.png" width="60%">
 
 ### localhost:8080/crawl
 <img src="https://user-images.githubusercontent.com/33336934/92308366-012e3000-efd8-11ea-92d9-9ae3ae47e105.png" width="70%">
