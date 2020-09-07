@@ -4,6 +4,8 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.inject.Inject;
+
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -18,7 +20,9 @@ public class CrawlingServiceImp implements CrawlingService{
 	private static final Logger logger = LoggerFactory.getLogger(CrawlingServiceImp.class);
 	private static String url ="https://zdnet.co.kr/news/?lstcode=0000&page=1"; 
 	
-	@SuppressWarnings("null")
+	@Inject
+	private CrawlingDAO dao;
+	
 	@Override
 	public List<CrawlingVO> crawl() throws IOException {
 
@@ -31,22 +35,29 @@ public class CrawlingServiceImp implements CrawlingService{
 			e.printStackTrace();
 		}
 		
-		Elements newsList= doc.select("section.news_box");
-		
 //		doc.select("[href]") : href 속성을 가진 요소들을 선택합니다.
 		
-				
+		
 //		div.newPost = div.assetText
+		
+//		<section class = "news_box"> 태그 안에 내용들을 모두 가져온다.		
+		Elements newsList= doc.select("section.news_box");
+				
+//		<dic class = "newsPost">태그 안에 내용들을 element에 담는다.
 		for(Element element : newsList.select("div.newsPost")) {
 			
 			CrawlingVO cvo = new CrawlingVO();
 		
+//			뉴스 제목,뉴스 내용,링크,이미지를 가져와서 담는다.
 			cvo.setTitle(element.select("h3").text()); //title
-			cvo.setBody(element.select("p").text()); //body 
+			cvo.setContent(element.select("p").text()); //content
 			cvo.setLink(element.getElementsByAttribute("href").attr("href")); //link
 			cvo.setImg(element.getElementsByAttribute("data-src").attr("data-src")); //image
 			
+			dao.insertData(cvo);
+			
 			list.add(cvo);
+			
 		}
 	
 		return list;

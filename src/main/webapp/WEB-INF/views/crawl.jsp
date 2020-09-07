@@ -13,19 +13,19 @@
 		<div class="newsPost">
 			<div class="newsPost">
 				<c:forEach items="${newsList }" var="news">
-					<div class="assetThumb">
+					<span class="newsThumb">
 						<a href="https://zdnet.co.kr/${news.link }" title="">
 							<figure class="img">
 								<img src="${news.img }" data-src="${news.img }" class="lazyload" width="170" height="122" alt="">
 							</figure>
 						</a>
-					</div>
-					<div class="assetText">
+					</span>
+					<span class="newsText">
 	               		<a href="https://zdnet.co.kr/${news.link }">
 	                		<h3>${news.title }</h3>
-	                   		<p>${news.body }</p>
+	                   		<p>${news.content }</p>
 						</a>
-					</div>
+					</span>
 				</c:forEach>
 			</div>
 		</div>

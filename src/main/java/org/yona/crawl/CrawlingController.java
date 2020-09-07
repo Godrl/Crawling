@@ -19,7 +19,7 @@ public class CrawlingController {
 	private static final Logger logger = LoggerFactory.getLogger(CrawlingController.class);
 	
 	@Inject
-	private CrawlingServiceImp service;
+	private CrawlingService service;
 	
 	@RequestMapping(value = "/crawl", method = RequestMethod.GET)
 	public void crawl(Model model) {

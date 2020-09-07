@@ -10,17 +10,6 @@
 </h1>
 
 <P>  The time on the server is ${serverTime}. </P>
-<input type="button" id="submit" name="crawl" value="Crawling"></input>
+<input type="button" id="submit" value="Crawling" onclick="location.href='/crawl'"></input>
 </body>
-
-<script>
-	$(document).ready(function() {
-
-		$("#submit").on("click", function() {
-			location.href = "crawl";
-		});				
-		
-	});
-</script>
-
 </html>

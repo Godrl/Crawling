@@ -1,9 +1,11 @@
 package org.yona.crawl;
 
+import java.util.Date;
+
 public class CrawlingVO {
 
 	private String title;
-	private String body;
+	private String content;
 	private String link;
 	private String img;
 		
@@ -13,13 +15,12 @@ public class CrawlingVO {
 	public void setTitle(String title) {
 		this.title = title;
 	}
-	public String getBody() {
-		return body;
+	public String getContent() {
+		return content;
 	}
-	public void setBody(String body) {
-		this.body = body;
+	public void setContent(String content) {
+		this.content = content;
 	}
-
 	public String getLink() {
 		return link;
 	}
@@ -32,8 +33,10 @@ public class CrawlingVO {
 	public void setImg(String img) {
 		this.img = img;
 	}
+	
 	@Override
 	public String toString() {
-		return "CrawlingVO [title=" + title + ", body=" + body + "]";
+		return "CrawlingVO [title=" + title + ", content=" + content + ", link=" + link + ", img=" + img + "]";
 	}
+	
 }
