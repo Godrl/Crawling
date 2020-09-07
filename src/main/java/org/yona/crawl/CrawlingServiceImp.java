@@ -47,13 +47,14 @@ public class CrawlingServiceImp implements CrawlingService{
 		for(Element element : newsList.select("div.newsPost")) {
 			
 			CrawlingVO cvo = new CrawlingVO();
-		
-//			뉴스 제목,뉴스 내용,링크,이미지를 가져와서 담는다.
+			
+//			뉴스 제목,뉴스 내용,링크,이미지,날짜를 가져와서 담는다.
 			cvo.setTitle(element.select("h3").text()); //title
-			cvo.setContent(element.select("p").text()); //content
+			cvo.setContent(element.select("a").select("p").text()); //content
 			cvo.setLink(element.getElementsByAttribute("href").attr("href")); //link
 			cvo.setImg(element.getElementsByAttribute("data-src").attr("data-src")); //image
-			
+			cvo.setDate(element.select("span").text()); // date
+					
 			dao.insertData(cvo);
 			
 			list.add(cvo);

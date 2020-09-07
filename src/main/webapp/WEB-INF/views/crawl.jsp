@@ -20,12 +20,13 @@
 							</figure>
 						</a>
 					</span>
-					<span class="newsText">
+					<div class="newsText">
 	               		<a href="https://zdnet.co.kr/${news.link }">
 	                		<h3>${news.title }</h3>
 	                   		<p>${news.content }</p>
 						</a>
-					</span>
+					</div>
+					<span>${news.date }</span>
 				</c:forEach>
 			</div>
 		</div>

@@ -6,8 +6,8 @@
 <mapper namespace="crawl">
 	
 	<insert id="rgstData">
-		INSERT INTO	archives (TITLE,CONTENT,LINK,IMAGE)
-		VALUES	(#{title}, #{content}, #{link}, #{img})
+		INSERT INTO	archives (TITLE,CONTENT,LINK,IMAGE,DATE)
+		VALUES	(#{title}, #{content}, #{link}, #{img}, #{date})
 	</insert>
 
 </mapper>
