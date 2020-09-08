@@ -10,26 +10,24 @@
 	<div class="left_cont">
 	<h2>News List</h2>
 	<section class="news_box">
-		<div class="newsPost">
+		<c:forEach items="${newsList }" var="news">
 			<div class="newsPost">
-				<c:forEach items="${newsList }" var="news">
-					<span class="newsThumb">
-						<a href="https://zdnet.co.kr/${news.link }" title="">
-							<figure class="img">
-								<img src="${news.img }" data-src="${news.img }" class="lazyload" width="170" height="122" alt="">
-							</figure>
-						</a>
-					</span>
-					<div class="newsText">
-	               		<a href="https://zdnet.co.kr/${news.link }">
-	                		<h3>${news.title }</h3>
-	                   		<p>${news.content }</p>
-						</a>
-					</div>
-					<span>${news.date }</span>
-				</c:forEach>
+				<span class="newsThumb" style="width:30%">
+					<a href="https://zdnet.co.kr/${news.link }" title="">
+						<figure class="img">
+							<img src="${news.img }" data-src="${news.img }" class="lazyload" width="170" height="122" alt="">
+						</figure>
+					</a>
+				</span>
+				<span class="newsText" style="width:70%">
+	           		<a href="https://zdnet.co.kr/${news.link }">
+	               		<h3>${news.title }</h3>
+	               		<p>${news.content }</p>
+					</a>
+				</span>
+				<span>${news.date }</span>
 			</div>
-		</div>
+		</c:forEach>
 	</section>
 	</div>
 	

@@ -18,7 +18,7 @@ public class Scheduler {
 	@Inject
 	private CrawlingService service;
 		
-		@Scheduled(cron = "0 0 10 * * *") // 매일 오전10시에 자동적으로 크롤링을 함 
+		@Scheduled(cron = "0 0 20 * * *") // 매일 오전10시에 자동적으로 크롤링을 함 
 		public void autoUpdate() {
 			logger.info("===== Crawling Auto Update =====");
 			try {

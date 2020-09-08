@@ -7,4 +7,6 @@ public interface CrawlingService {
 
 	public List<CrawlingVO> crawl()throws IOException;
 	
+	public String hotNews();
+	
 }

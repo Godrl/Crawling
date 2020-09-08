@@ -18,4 +18,9 @@ public class CrawlingDAOImp implements CrawlingDAO{
 		session.insert(namsepace+".rgstData",cvo);
 	}
 
+	@Override
+	public String hotNews() {
+		return session.selectOne(namsepace+".hotNews");
+	}
+
 }

@@ -10,4 +10,10 @@
 		VALUES	(#{title}, #{content}, #{link}, #{img}, #{date})
 	</insert>
 
+<!-- 저장되어 있는 기사 중 가장 최근기사날짜를 가져온다. -->
+	<select id="hotNews" resultType="String">
+		SELECT	MAX(DATE)
+		FROM	ARCHIVES	
+	</select>
+		
 </mapper>
