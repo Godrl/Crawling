@@ -8,7 +8,7 @@
 
 ### localhost:8080/crawl <br> <img src="https://user-images.githubusercontent.com/33336934/92365130-b5da6580-f12e-11ea-936d-4071595e8511.png" width="60%">
 
-## ProgramStacks
+## Program Stacks
 - Jsoup1.8
 - SpringFramework5
 - Mysql8
