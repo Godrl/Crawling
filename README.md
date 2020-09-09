@@ -1,5 +1,5 @@
 ### (https://zdnet.co.kr/news/?lstcode=0000&page=1)
-# Crawling  <br> <img src="https://user-images.githubusercontent.com/33336934/92365215-bc68dd00-f12e-11ea-8272-d03582d7329e.png" width="70%">
+# 크롤링 대상 페이지  <br> <img src="https://user-images.githubusercontent.com/33336934/92365215-bc68dd00-f12e-11ea-8272-d03582d7329e.png" width="70%">
 
 ### CrawlingServiceImp.java <br> <img src="https://user-images.githubusercontent.com/33336934/92441860-e9c69100-f1e9-11ea-9b29-8fbf4dd3fe6c.png" width="80%">
 ### CrawlingSQL.xml <br> <img src="https://user-images.githubusercontent.com/33336934/92441871-ef23db80-f1e9-11ea-9992-e8df42d796cb.png" width="50%">
